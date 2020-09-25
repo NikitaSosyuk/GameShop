@@ -59,7 +59,7 @@ button:hover{
 
 .login h1 {
     color: #2a2a2a;
-    text-shadow: 0 0 2px #a0a0a0;
+    text-shadow: 0 0 1px #a0a0a0;
     text-align:center; }
 
 .loginField {
