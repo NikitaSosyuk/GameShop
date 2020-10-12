@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/*"})
+@WebFilter("/")
 public class LogInFilter implements Filter {
 
     @Override

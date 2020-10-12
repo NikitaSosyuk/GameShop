@@ -42,13 +42,12 @@
 
 <div class="bd-example">
     <div id="carouselExampleControls" class="carousel slide mt-1" data-ride="carousel">
-        <div class="carousel-inner w-100 m-auto">
+        <div class="carousel-inner w-100 m-auto ml-2 mr-2">
             <div class="carousel-item active">
                 <img class="d-block w-100 rounded" src="./HomePage/images/Bitmap.png" alt="Баннер" data-holder-rendered="true">
             </div>
         </div>
     </div>
 </div>
-Остальное в разработке))
 </body>
 </html>
