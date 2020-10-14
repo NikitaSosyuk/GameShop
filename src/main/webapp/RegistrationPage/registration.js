@@ -12,10 +12,27 @@ function checkUsername() {
     }
 
     if (xml.status !== 200) {
-        document.getElementById(username-error).style.display = "block"
+        document.getElementById("username-error").style.display = "block"
     } else {
         if (result === "false") {
             document.getElementById("username-error").style.display = "block"
         }
+    }
+}
+
+function checkPasswords() {
+    const password = document.getElementById("password")
+    const secondPassword = document.getElementById("password-two")
+
+    if (password.value !== secondPassword.value) {
+        document.getElementById("password-error").style.display = "block"
+    } else {
+        document.getElementById("password-error").style.display = "none"
+    }
+}
+
+function login() {
+    if (document.getElementById("password-error").style.display === "none" && document.getElementById("username-error").style.display === "none") {
+        document.getElementById("lgn").submit()
     }
 }

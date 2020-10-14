@@ -18,9 +18,9 @@
         <label><input class="loginField" id="username" type="text" name="username" placeholder="Логин" onblur="checkUsername();"></label>
         <p class="error" id="username-error">Логин уже занят</p>
         <label><input class="loginField" id="password" type="password" name="password" placeholder="Пароль"></label><br>
-        <label><input class="loginField" id="password-two" type="password" name="password-two" placeholder="Пароль повторно"></label><br>
+        <label><input class="loginField" id="password-two" type="password" name="password-two" placeholder="Пароль повторно" onblur="checkPasswords();"></label><br>
         <p class="error" id="password-error">Пароли не совпадают</p>
-        <button id="lgn" type="submit" class="btn">Зарегистрироваться</button>
+        <button id="lgn" class="btn" onclick="login();">Зарегистрироваться</button>
     </form>
 </div>
 </body>
