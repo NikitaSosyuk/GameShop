@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NNGameShop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="./LogIn/images/icon.png">
+    <link rel="stylesheet" type="text/css" href="./LogIn/css/login.css">
+    <script src="./RegistrationPage/registration.js"></script>
+</head>
+<body>
+<header>
+    <img class= "logo-image" src="./LogIn/images/Logo.png" alt="NNGameshop">
+</header>
+<div class="login">
+    <h1>Регистрация</h1>
+    <form method="post" action="">
+        <label><input class="loginField" id="username" type="text" name="username" placeholder="Логин" onblur="checkUsername();"></label>
+        <p class="error" id="username-error">Логин уже занят</p>
+        <label><input class="loginField" id="password" type="password" name="password" placeholder="Пароль"></label><br>
+        <label><input class="loginField" id="password-two" type="password" name="password-two" placeholder="Пароль повторно"></label><br>
+        <p class="error" id="password-error">Пароли не совпадают</p>
+        <button id="lgn" type="submit" class="btn">Зарегистрироваться</button>
+    </form>
+</div>
+</body>
+</html>

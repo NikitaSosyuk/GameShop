@@ -40,7 +40,7 @@
     </nav>
 </header><br>
 
-<div class="bd-example">
+<div class="bd-example mb-5">
     <div id="carouselExampleControls" class="carousel slide mt-1" data-ride="carousel">
         <div class="carousel-inner w-100 m-auto ml-2 mr-2">
             <div class="carousel-item active">
@@ -49,5 +49,36 @@
         </div>
     </div>
 </div>
+
+<div class="card-deck m-md-auto w-75">
+    <div class="card w-auto">
+        <img class="card-img-top m-auto" src="/HomePage/images/CaseOne.jpg" alt="Кейс 1">
+        <div class="card-body">
+            <h5 class="card-title">Набор №1 - Эконом</h5>
+            <p class="card-text">Сбалансированный кейс. Возможность выиграть: Journey, Forza Horizon, Minecraft и многое другое...</p>
+            <h5 class="card-title">229р</h5>
+            <a href="#" class="btn btn-dark">Купить</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top m-auto" src="/HomePage/images/CaseTwo.jpg" alt="Кейс 2">
+        <div class="card-body">
+            <h5 class="card-title">Набор №2 - Баланс</h5>
+            <p class="card-text">Выше шанс получить новинки игровой индустрии! Возможность выиграть: Mortal Combat X, GTA V и многое другое..</p>
+            <h5 class="card-title">329р</h5>
+            <a href="#" class="btn btn-dark">Купить</a>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top m-auto" src="/HomePage/images/CaseThree.jpg" alt="Кейс 3">
+        <div class="card-body">
+            <h5 class="card-title">Набор №3 - Огонь</h5>
+            <p class="card-text">Только новинки! Возможность выиграть: Metro Exodus, Death Stranding, Star Wars и многое другое..</p>
+            <h5 class="card-title">529р</h5>
+            <a href="#" class="btn btn-dark">Купить</a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

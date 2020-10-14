@@ -119,3 +119,8 @@ button:hover{
 .remember {
     margin: 10px;
 }
+
+.error {
+    color: red;
+    display: none;
+}
