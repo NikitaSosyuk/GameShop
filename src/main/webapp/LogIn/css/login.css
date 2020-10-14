@@ -123,4 +123,6 @@ button:hover{
 .error {
     color: red;
     display: none;
+    height: 8%;
+    font-weight: lighter;
 }
