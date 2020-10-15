@@ -126,3 +126,34 @@ button:hover{
     height: 8%;
     font-weight: lighter;
 }
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    margin-top: 5px;
+    color: #265301;
+    border-radius: 8px;
+}
+
+a:visited {
+    color: #437A16;
+}
+
+a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    background: #CDFEAA;
+}
+
+a:active {
+    background: #4aa003;
+    color: #cdfeaa;
+}

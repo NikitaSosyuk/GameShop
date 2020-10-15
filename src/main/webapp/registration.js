@@ -9,13 +9,16 @@ function checkUsername() {
 
     if (result === "true") {
         document.getElementById("username-error").style.display = "none"
+        document.getElementById("lgn").disabled = true
     }
 
     if (xml.status !== 200) {
         document.getElementById("username-error").style.display = "block"
+        document.getElementById("lgn").disabled = false
     } else {
         if (result === "false") {
             document.getElementById("username-error").style.display = "block"
+            document.getElementById("lgn").disabled = false
         }
     }
 }
@@ -26,13 +29,9 @@ function checkPasswords() {
 
     if (password.value !== secondPassword.value) {
         document.getElementById("password-error").style.display = "block"
+        document.getElementById("lgn").disabled = false
     } else {
         document.getElementById("password-error").style.display = "none"
-    }
-}
-
-function login() {
-    if (document.getElementById("password-error").style.display === "none" && document.getElementById("username-error").style.display === "none") {
-        document.getElementById("lgn").submit()
+        document.getElementById("lgn").disabled = true
     }
 }

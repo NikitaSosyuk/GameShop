@@ -7,13 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/registration")
-public class RegistrationServlet extends HttpServlet  {
+@WebServlet("/logInCheck")
+public class LoginCheckServlet extends HttpServlet {
 
-
+    //сам сделай логику с бд
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/registration.html").forward(req, resp);
+        String username = req.getParameter("username");
+        resp.setCharacterEncoding("UTF-8");
+        if (username.length() < 10) {
+            resp.getWriter().write("true");
+        } else {
+            resp.getWriter().write("false");
+        }
     }
-
 }
