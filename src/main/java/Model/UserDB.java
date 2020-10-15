@@ -24,4 +24,9 @@ public class UserDB {
         }
         return false;
     }
+
+    public UserDB() {
+        users.add(new User("Nikita", "BestCoder"));
+        users.add(new User("admin", "admin"));
+    }
 }
