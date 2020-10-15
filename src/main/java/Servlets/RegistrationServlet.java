@@ -1,4 +1,4 @@
-package Registration;
+package Servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,15 +7,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/reg")
-public class RegServlet extends HttpServlet  {
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    }
+@WebServlet("/registration")
+public class RegistrationServlet extends HttpServlet  {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("./RegistrationPage/registration.html").forward(req, resp);
+        req.getRequestDispatcher("/registration.html").forward(req, resp);
     }
+
 }

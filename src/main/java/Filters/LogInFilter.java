@@ -1,12 +1,11 @@
-package filter;
+package Filters;
 
-import javaBack.UserDB;
+import Model.UserDB;
 import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebFilter("/")
+//@WebFilter("/")
 public class LogInFilter implements Filter {
 
     @Override
@@ -25,12 +24,12 @@ public class LogInFilter implements Filter {
         for (Cookie cookie : req.getCookies()) {
             if (cookie.getName().equals("user")) {
                 session.setAttribute("username", cookie.getValue());
-                req.getRequestDispatcher("./HomePage/homepage.jsp").forward(req, res);
+                req.getRequestDispatcher("Servlets/HomePage/homepage.jsp").forward(req, res);
             }
         }
 
         if (login == null && password == null) {
-            req.getRequestDispatcher("./LogIn/login.html").forward(req, res);
+            req.getRequestDispatcher("Servlets/LogIn/login.html").forward(req, res);
         } else {
             if (db.userIsExist(login, password)) {
                 if (cookieCheck != null && cookieCheck.equals("check")) {
@@ -39,9 +38,9 @@ public class LogInFilter implements Filter {
                     res.addCookie(cookie);
                 }
                 session.setAttribute("username", login);
-                req.getRequestDispatcher("./HomePage/homepage.jsp").forward(req, res);
+                req.getRequestDispatcher("Servlets/HomePage/homepage.jsp").forward(req, res);
             } else {
-                req.getRequestDispatcher("./LogIn/login.html").forward(req, res);
+                req.getRequestDispatcher("Servlets/LogIn/login.html").forward(req, res);
             }
         }
     }

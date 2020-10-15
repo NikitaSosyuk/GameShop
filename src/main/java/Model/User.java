@@ -1,4 +1,4 @@
-package javaBack;
+package Model;
 
 public class User {
 
