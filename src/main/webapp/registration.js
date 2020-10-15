@@ -9,16 +9,16 @@ function checkUsername() {
 
     if (result === "true") {
         document.getElementById("username-error").style.display = "none"
-        document.getElementById("lgn").disabled = true
+        document.getElementById("lgn").disabled = false
     }
 
     if (xml.status !== 200) {
         document.getElementById("username-error").style.display = "block"
-        document.getElementById("lgn").disabled = false
+        document.getElementById("lgn").disabled = true
     } else {
         if (result === "false") {
             document.getElementById("username-error").style.display = "block"
-            document.getElementById("lgn").disabled = false
+            document.getElementById("lgn").disabled = true
         }
     }
 }
@@ -29,9 +29,9 @@ function checkPasswords() {
 
     if (password.value !== secondPassword.value) {
         document.getElementById("password-error").style.display = "block"
-        document.getElementById("lgn").disabled = false
+        document.getElementById("lgn").disabled = true
     } else {
         document.getElementById("password-error").style.display = "none"
-        document.getElementById("lgn").disabled = true
+        document.getElementById("lgn").disabled = false
     }
 }
