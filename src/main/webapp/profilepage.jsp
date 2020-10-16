@@ -46,7 +46,7 @@
                     <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail">
                         <a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
                     <div class="media-body mb-5 text-black">
-                        <h4 class="mt-0 mb-0">getName()</h4>
+                        <h4 class="mt-0 mb-0"><%=request.getSession().getAttribute("username")%></h4>
                         <p class="small mb-0"> <i class="fas fa-map-marker-alt mr-2"></i>Пользователь</p>
                     </div>
                 </div>
@@ -61,8 +61,9 @@
             <div class="px-4 py-3">
                 <h5 class="mb-0">About</h5>
                 <div class="p-4 rounded shadow-sm bg-light">
-                    <p class="font-weight-normal mb-0">Username: getUsername()</p>
+                    <p class="font-weight-normal mb-0">Username: <%=request.getSession().getAttribute("username")%></p>
                     <p class="font-weight-normal  mb-0">Email: getEmail()</p>
+                    <p class="font-weight-normal  mb-0">Дата регистрации: <%=request.getSession().getAttribute("registrationTimestamp")%></p>
                 </div>
             </div>
             <div class="py-4 px-4">
