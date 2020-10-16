@@ -34,7 +34,7 @@
                 </li>
             </ul>
             <ul class="navbar-nav mr-0">
-                <a class="nav-link ml-0">Привет, <%=request.getSession().getAttribute("username")%></a>
+                <a href="/profilepage" class="nav-link ml-0">Привет, <%=request.getSession().getAttribute("username")%></a>
             </ul>
         </div>
     </nav>
