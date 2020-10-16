@@ -1,21 +1,45 @@
 package Model;
 
+import java.sql.Timestamp;
+
 public class User {
 
-    private String login;
+    private int id;
+    private String username;
     private String password;
+    private Timestamp registrationTimestamp;
+
 
     public User(String login, String password) {
-        this.login = login;
+        this.username = login;
         this.password = password;
     }
 
-    public String getLogin() {
-        return login;
+    public User(){
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Timestamp getRegistrationTimestamp() {
+        return registrationTimestamp;
+    }
+
+    public void setRegistrationTimestamp(Timestamp registrationTimestamp) {
+        this.registrationTimestamp = registrationTimestamp;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String login) {
+        this.username = login;
     }
 
     public String getPassword() {
