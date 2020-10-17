@@ -1,5 +1,7 @@
 package Servlets;
 
+import Model.UserDB;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,8 +16,9 @@ public class LoginCheckServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
+        UserDB users = new UserDB();
         resp.setCharacterEncoding("UTF-8");
-        if (username.length() < 10) {
+        if (users.getUserByName(username) == null) {
             resp.getWriter().write("true");
         } else {
             resp.getWriter().write("false");

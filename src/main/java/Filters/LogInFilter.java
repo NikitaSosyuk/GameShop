@@ -5,7 +5,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-//@WebFilter("/")
+//@WebFilter(urlPatterns = {"/*"})
 public class LogInFilter implements Filter {
 
     @Override
@@ -24,12 +24,12 @@ public class LogInFilter implements Filter {
         for (Cookie cookie : req.getCookies()) {
             if (cookie.getName().equals("user")) {
                 session.setAttribute("username", cookie.getValue());
-                req.getRequestDispatcher("Servlets/HomePage/homepage.jsp").forward(req, res);
+                res.sendRedirect("/homepage");
             }
         }
 
         if (login == null && password == null) {
-            req.getRequestDispatcher("Servlets/LogIn/login.html").forward(req, res);
+            res.sendRedirect("/login");
         } else {
             if (db.userIsExist(login, password)) {
                 if (cookieCheck != null && cookieCheck.equals("check")) {
@@ -38,9 +38,9 @@ public class LogInFilter implements Filter {
                     res.addCookie(cookie);
                 }
                 session.setAttribute("username", login);
-                req.getRequestDispatcher("Servlets/HomePage/homepage.jsp").forward(req, res);
+                res.sendRedirect("/homepage");
             } else {
-                req.getRequestDispatcher("Servlets/LogIn/login.html").forward(req, res);
+                res.sendRedirect("/login");
             }
         }
     }

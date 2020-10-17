@@ -4,10 +4,7 @@ import Model.UserDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet("/login")
@@ -23,6 +20,7 @@ public class LoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String cookieCheck = req.getParameter("remember");
+        System.out.println("entered");
 
         HttpSession session = req.getSession();
 
@@ -30,8 +28,14 @@ public class LoginServlet extends HttpServlet {
 
         if(username.equals("") || password.equals("")) {
             req.getServletContext().getRequestDispatcher("/signInPage").forward(req, resp);
+            System.out.println("empty");
         } else {
             if (users.userIsExist(username, password)) {
+                if (cookieCheck != null && cookieCheck.equals("check")) {
+                    Cookie cookie = new Cookie("saved", username);
+                    cookie.setMaxAge(100);
+                    resp.addCookie(cookie);
+                }
                 resp.sendRedirect("/homepage");
                 session.setAttribute("username", username);
             } else {
