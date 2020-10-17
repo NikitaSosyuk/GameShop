@@ -2,6 +2,14 @@ function checkUsername() {
     const username = document.getElementById("username")
     const xml = new XMLHttpRequest()
 
+    if (username.value.length < 3)  {
+        document.getElementById("username-size-error").style.display = "block"
+        document.getElementById("lgn").disabled = true
+    } else {
+        document.getElementById("username-size-error").style.display = "none"
+        document.getElementById("lgn").disabled = false
+    }
+
     xml.open("GET", "http://localhost:8080/logInCheck?username=" + username.value, false)
     xml.send()
 
@@ -34,4 +42,5 @@ function checkPasswords() {
         document.getElementById("password-error").style.display = "none"
         document.getElementById("lgn").disabled = false
     }
+    checkUsername()
 }
