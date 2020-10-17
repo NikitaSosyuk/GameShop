@@ -3,16 +3,17 @@ package Servlets;
 import Model.UserDB;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/errorlogin")
+public class ErrorLoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getServletContext().getRequestDispatcher("/login.html").forward(req, resp);
+        req.getServletContext().getRequestDispatcher("/loginError.html").forward(req, resp);
     }
 
     @Override
@@ -43,5 +44,4 @@ public class LoginServlet extends HttpServlet {
             }
         }
     }
-
 }
