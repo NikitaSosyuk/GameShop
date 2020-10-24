@@ -17,13 +17,14 @@
     <form method="post" action="/registration">
         <label><input class="loginField" id="username" type="text" name="username" placeholder="Логин" onblur="checkUsername();"></label>
         <p class="error" id="username-error">Логин уже занят</p>
+        <p class="error" id="username-size-error">Логин слишком короткий</p>
         <label><input class="loginField" id="password" type="password" name="password" placeholder="Пароль"></label><br>
         <label><input class="loginField" id="password-two" type="password" name="password-two" placeholder="Пароль повторно" onblur="checkPasswords();"></label><br>
         <p class="error" id="password-error">Пароли не совпадают</p>
         <label><input class="remember" name="remember" type="checkbox" value="check">Запомнить меня?</label><br>
         <button id="lgn" class="btn">Зарегистрироваться</button>
         <center>
-        <a href="/login">Sign in!</a>
+            <a href="/login">Sign in!</a>
         </center>
     </form>
 </div>

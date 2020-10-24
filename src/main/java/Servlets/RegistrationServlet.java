@@ -19,7 +19,6 @@ public class RegistrationServlet extends HttpServlet  {
         HttpSession session = req.getSession();
 
         UserDB userDB = new UserDB();
-        System.out.println("false");
         if (userDB.userIsExist(username, password)) {
             resp.sendRedirect("/registration");
         } else {
