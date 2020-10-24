@@ -19,17 +19,16 @@ public class RegistrationServlet extends HttpServlet  {
         HttpSession session = req.getSession();
 
         UserDB userDB = new UserDB();
-        System.out.println("false");
         if (userDB.userIsExist(username, password)) {
             resp.sendRedirect("/registration");
         } else {
             if (userDB.saveUser(username, password)) {
-                resp.sendRedirect("/homepage");
                 if (cookieCheck != null && cookieCheck.equals("check")) {
                     Cookie cookie = new Cookie("saved", username);
                     cookie.setMaxAge(100);
                     resp.addCookie(cookie);
                 }
+                resp.sendRedirect("/homepage");
                 session.setAttribute("username", username);
             }
         }

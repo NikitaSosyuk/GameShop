@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class UserDB implements UserDAO{
 
     private static MySQLConnection connection = new MySQLConnection();
+
     private static final String SQL_INSERT_INTO_USERS
             = "INSERT INTO NNGamingShopDB.users(username, password) VALUES (?, ?)";
 
