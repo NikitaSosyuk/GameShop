@@ -18,7 +18,7 @@
             <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
                 <a class="navbar-brand">🎮</a>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Каталог<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/homepage">Каталог<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Подборки<span class="sr-only">(current)</span></a>
@@ -27,11 +27,17 @@
                     <a class="nav-link" href="#">Скидки<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">FAQ<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/faqpage">FAQ<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Кейсы<span class="sr-only">(current)</span></a>
                 </li>
+            </ul>
+            <ul class="navbar-nav mr-0">
+                <a href="/profilepage" class="nav-link ml-0">Привет, <%=request.getSession().getAttribute("username")%>❗</a>
+            </ul>
+            <ul class="navbar-nav col-1 mr-0">
+                <a href="/basketpage" class="nav-link ml-0">Корзина🛒</a>
             </ul>
         </div>
     </nav>

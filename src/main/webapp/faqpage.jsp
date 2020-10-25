@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/homePageImages/icon.png">
     <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/faq.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
@@ -42,46 +43,29 @@
         </div>
     </nav>
 </header><br>
-
-<div class="bd-example mb-5">
-    <div id="carouselExampleControls" class="carousel slide mt-1" data-ride="carousel">
-        <div class="carousel-inner w-100 m-auto ml-2 mr-2">
-            <div class="carousel-item active">
-                <img class="d-block w-100 rounded" src="images/homePageImages/Bitmap.png" alt="Баннер" data-holder-rendered="true">
-            </div>
-        </div>
+<center><h1>FAQ</h1></center>
+<div class="faq" id="faq">
+    <div class="item">
+        <h3><div class="question">1. Золотое правило! 1 игра - в одни руки!</div></h3>
+        <div class="answer">Друзья! Ключ или Гифт который Вы получили, принадлежит только вам! Повторно получить этот код нереально!</div>
+    </div>
+    <div class="item">
+        <h3><div class="question">2. Игры какой стоимости выпадают?</div></h3>
+        <div class="answer">Спешим сообщить, что стоимость игр которые выпадают в рандоме составляет от 129 до 2599 руб в сервисе Steam, за исключением тех случаев, когда в Стиме проходят недели распродаж! </div>
+    </div>
+    <div class="item">
+        <h3><div class="question">3. Где активируется полученная игра?</div></h3>
+        <div class="answer">В сервисах Steam, Origin, Uplay и Battle.net</div>
+    </div>
+    <div class="item" id="Steam">
+        <h3><div class="question">4. Как активировать Steam Ключ / Gift?</div></h3>
+        <div class="answer">Инструкция по активации ключа в Steam:<br>
+            1. Загрузите и установите клиент;<br>
+            2. Зарегистрируйте аккаунт;<br>
+            3. Нажмите кнопку <b>«Добавить игру - активировать через Steam»</b> - следуйте инструкциям;<br>
+            4. После активации, игра появится в «Библиотеке» и Вы сможете ее скачать;<br>
+            5. После полной установки наслаждайтесь игровым процессом.<br>
     </div>
 </div>
-
-<div class="card-deck m-md-auto w-75">
-    <div class="card w-auto">
-        <img class="card-img-top m-auto" src="/images/homePageImages/CaseOne.jpg" alt="Кейс 1">
-        <div class="card-body">
-            <h5 class="card-title">Набор №1 - Эконом</h5>
-            <p class="card-text">Сбалансированный кейс. Возможность выиграть: Journey, Forza Horizon, Minecraft и многое другое...</p>
-            <h5 class="card-title">229р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top m-auto" src="/images/homePageImages/CaseTwo.jpg" alt="Кейс 2">
-        <div class="card-body">
-            <h5 class="card-title">Набор №2 - Баланс</h5>
-            <p class="card-text">Выше шанс получить новинки игровой индустрии! Возможность выиграть: Mortal Combat X, GTA V и многое другое..</p>
-            <h5 class="card-title">329р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top m-auto" src="/images/homePageImages/CaseThree.jpg" alt="Кейс 3">
-        <div class="card-body">
-            <h5 class="card-title">Набор №3 - Огонь</h5>
-            <p class="card-text">Только новинки! Возможность выиграть: Metro Exodus, Death Stranding, Star Wars и многое другое..</p>
-            <h5 class="card-title">529р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>

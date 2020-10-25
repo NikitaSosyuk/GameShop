@@ -9,7 +9,7 @@ public class MySQLConnection {
         try {
             String url = "jdbc:mysql://localhost:3306/NNGamingShopDB?useUnicode=true&serverTimezone=Europe/Moscow";
             String user = "root";
-            String password = "qwerty808";
+            String password = "rootpassword";
             Class.forName("com.mysql.cj.jdbc.Driver");
             return DriverManager.getConnection(url, user, password);
         } catch (SQLException | ClassNotFoundException e) {
