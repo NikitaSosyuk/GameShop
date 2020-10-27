@@ -50,15 +50,15 @@
     <tr>
         <td class="table-name">Наименование товара</td>
         <td class="table-count">Количество</td>
-        <td class="table-price">Цена</td>
+        <td class="table-price">Цена за шт.</td>
     </tr>
     </thead>
     <tbody>
     <c:forEach var="product" items="${products}">
         <tr>
             <td class="table-name">${product.getName()}</td>
-            <td class="table-count">${product.getCount()} шт. <a href="/servlet?name=">+</a><a href="">-</a></td>
-            <td class="table-price">${product.getPrice()} рублей <a href="" class="delete">Удалить</a></td>
+            <td class="table-count">1</td>
+            <td class="table-price">${product.getPrice()} рублей <a href="/delete?id=${products.getId()}" class="delete">Удалить</a></td>
         </tr>
     </c:forEach>
     </tbody>

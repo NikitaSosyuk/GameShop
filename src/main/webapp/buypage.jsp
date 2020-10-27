@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.*, java.text.*" %>
 <html lang="en">
 <head>
@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/homePageImages/icon.png">
     <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/editapage.css">
     <link rel="stylesheet" type="text/css" href="/styles/faq.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="registration.js"></script>
 </head>
 <body>
 <header>
@@ -42,8 +45,9 @@
             </ul>
         </div>
     </nav>
-</header><br>
-<center><h1>FAQ</h1></center>
+</header>
+<br>
+<center><h1>Поздравляем с покупкой!</h1></center>
 <div class="faq" id="faq">
     <div class="item">
         <h3><div class="question">1. Золотое правило! 1 игра - в одни руки!</div></h3>
