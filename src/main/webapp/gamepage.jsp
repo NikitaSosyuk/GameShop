@@ -48,25 +48,25 @@
             <div class="px-4 pt-0 pb-4 cover">
                 <center>
                     <div class="block">
-                        <div class="profile"><img src="${photoOfGame}" alt="Фото игры" width="200" class="rounded mb-2 img-thumbnail">
+                        <div class="profile"><img src="${game.getImage()}" alt="Фото игры" width="200" class="rounded mb-2 img-thumbnail">
                             <div class="media-body mb-5 text-black">
-                                <h4 class="mt-0 mb-0">${gameName}</h4>
-                                <p class="small mb-0"> <i class="fas fa-map-marker-alt mr-2"></i>${gameCompany}</p>
+                                <h4 class="mt-0 mb-0">${game.getName()}</h4>
+                                <p class="small mb-0"> <i class="fas fa-map-marker-alt mr-2"></i>${game.getCompany()}</p>
                             </div>
                         </div>
                     </div>
-                    <h5 class="font-weight-bold mb-0 d-block">Цена: ${gamePrice} Руб.</h5><br>
-                    <h6 class="font-weight-bold mb-0 d-block">Рейтинг: ${gameRating}</h6>
+                    <h5 class="font-weight-bold mb-0 d-block">Цена: ${game.getPrice()} Руб.</h5><br>
+                    <h6 class="font-weight-bold mb-0 d-block">Рейтинг: ${game.getRating()}</h6>
                 </center>
                 <div class="px-4 py-3">
                     <h5 class="mb-0">О игре:</h5>
                     <div class="p-4 rounded shadow-sm bg-light">
-                        <p class="font-weight-normal mb-0">${gameDescription}</p>
+                        <p class="font-weight-normal mb-0">${game.getDescription()}</p>
                     </div>
                 </div>
                 <div class="py-4 px-4">
                     <div class="d-flex align-items-center justify-content-between m-auto">
-                        <a href="/addToBacket?gameId=${gameID}" class="btn btn-outline-dark btn-sm btn-block">Добавить в корзину</a></div>
+                        <a href="/addToBacket?gameId=${game.getId()}" class="btn btn-outline-dark btn-sm btn-block">Добавить в корзину</a></div>
                 </div>
             </div>
         </div>

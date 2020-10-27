@@ -58,7 +58,7 @@
         <tr>
             <td class="table-name">${product.getName()}</td>
             <td class="table-count">1</td>
-            <td class="table-price">${product.getPrice()} рублей <a href="/delete?id=${products.getId()}" class="delete">Удалить</a></td>
+            <td class="table-price">${product.getPrice()} рублей <a href="/delete?id=${product.getId()}" class="delete">Удалить</a></td>
         </tr>
     </c:forEach>
     </tbody>

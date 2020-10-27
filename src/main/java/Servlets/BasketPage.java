@@ -23,7 +23,9 @@ public class BasketPage extends HttpServlet {
         List<Product> products = new LinkedList<>();
         products.add(product);
 
-        req.setAttribute("products", products);
+        HttpSession session = req.getSession();
+
+        session.setAttribute("products", products);
         req.getServletContext().getRequestDispatcher("/basketpage.jsp").forward(req, resp);
     }
 
