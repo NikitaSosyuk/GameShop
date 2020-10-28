@@ -11,6 +11,12 @@ import java.io.IOException;
 public class ByuPageServlet extends HttpServlet {
 
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println(req.getParameter("evaluation1"));
+        resp.sendRedirect("/homepage");
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getServletContext().getRequestDispatcher("/buypage.jsp").forward(req, resp);
     }

@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-    <a href="#"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
+    <a href="/homepage"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-sm">
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-1 mt-lg-0">

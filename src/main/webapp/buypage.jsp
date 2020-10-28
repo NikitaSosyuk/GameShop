@@ -18,7 +18,7 @@
 </head>
 <body>
 <header>
-    <a href="#"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
+    <a href="/homepage"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-sm">
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
@@ -50,6 +50,7 @@
 </header>
 <br>
 <center><h1>Поздравляем с покупкой!</h1></center>
+<form method="post" action="/buypage">
 <table>
     <thead>
     <tr>
@@ -58,12 +59,11 @@
     </tr>
     </thead>
     <tbody>
-    <form action="post" action="/buypage">
         <c:forEach var="product" items="${products}">
         <tr>
             <td class="table-name">${product.getName()}</td>
             <td class="table-price">
-                <select name="select" id="evaluation${product.getId()}">
+                <select name="evaluation${product.getId()}" id="evaluation${product.getId()}">
                     <option disabled>Выберите героя</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -78,7 +78,7 @@
     </tbody>
 
 </table>
-<center><a href="/makeMarks" class="buy_btn">На главную</a></center>
+<center><button id="marks" type="submit" class="btn">Поставить оценку</button></center>
 </form>
 </body>
 </html>
