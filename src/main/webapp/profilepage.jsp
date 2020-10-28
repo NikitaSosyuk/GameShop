@@ -12,7 +12,7 @@
 </head>
 <body>
 <header>
-    <a href="#"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
+    <a href="/homepage"><img src="images/homePageImages/Logo.png" id="logo" alt=""></a>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-sm">
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
@@ -50,7 +50,7 @@
             <div class="px-4 pt-0 pb-4 cover">
                 <div class="media align-items-end profile-head">
                     <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail">
-                        <a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+                        <a href="/editpage" class="btn btn-outline-dark btn-sm btn-block">Изменить профиль</a></div>
                     <div class="media-body mb-5 text-black">
                         <h4 class="mt-0 mb-0"><%=request.getSession().getAttribute("username")%></h4>
                         <p class="small mb-0"> <i class="fas fa-map-marker-alt mr-2"></i>Пользователь</p>
@@ -74,7 +74,7 @@
             </div>
             <div class="py-4 px-4">
                 <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Последняя купленная игра</h5><a href="#" class="btn btn-link text-muted">Показать все</a>
+                    <h5 class="mb-0">Последняя купленная игра</h5>
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mb-2 pr-lg-1">

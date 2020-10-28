@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.util.*, java.text.*" %>
-<%@ page import="Servlets.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
 <head>
@@ -10,8 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/homePageImages/icon.png">
     <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
+    <link rel="stylesheet" type="text/css" href="/styles/editapage.css">
     <link rel="stylesheet" type="text/css" href="/styles/basketpage.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/styles/faq.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="registration.js"></script>
 </head>
 <body>
 <header>
@@ -44,25 +47,38 @@
             </ul>
         </div>
     </nav>
-</header><br>
+</header>
+<br>
+<center><h1>Поздравляем с покупкой!</h1></center>
+<form method="post" action="/buypage">
 <table>
     <thead>
     <tr>
         <td class="table-name">Наименование товара</td>
-        <td class="table-count">Количество</td>
-        <td class="table-price">Цена за шт.</td>
+        <td class="table-price">Оценка</td>
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="product" items="${products}">
+        <c:forEach var="product" items="${products}">
         <tr>
             <td class="table-name">${product.getName()}</td>
-            <td class="table-count">1</td>
-            <td class="table-price">${product.getPrice()} рублей <a href="/delete?id=${product.getId()}" class="delete">Удалить</a></td>
+            <td class="table-price">
+                <select name="evaluation${product.getId()}" id="evaluation${product.getId()}">
+                    <option disabled>Выберите героя</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="evaluation${product.getId()}">Баллов</label></td>
         </tr>
-    </c:forEach>
+        </c:forEach>
     </tbody>
+
 </table>
-<center><a href="/buypage" class="buy_btn">Совершить покупку</a></center>
+<center><button id="marks" type="submit" class="btn">Поставить оценку</button></center>
+</form>
 </body>
 </html>

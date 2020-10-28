@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="images/homePageImages/icon.png">
     <link rel="stylesheet" type="text/css" href="/styles/homepage.css">
-    <link rel="stylesheet" type="text/css" href="/styles/faq.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
@@ -43,28 +42,33 @@
         </div>
     </nav>
 </header><br>
-<center><h1>FAQ</h1></center>
-<div class="faq" id="faq">
-    <div class="item">
-        <h3><div class="question">1. Золотое правило! 1 игра - в одни руки!</div></h3>
-        <div class="answer">Друзья! Ключ или Гифт который Вы получили, принадлежит только вам! Повторно получить этот код нереально!</div>
-    </div>
-    <div class="item">
-        <h3><div class="question">2. Игры какой стоимости выпадают?</div></h3>
-        <div class="answer">Спешим сообщить, что стоимость игр которые выпадают в рандоме составляет от 129 до 2599 руб в сервисе Steam, за исключением тех случаев, когда в Стиме проходят недели распродаж! </div>
-    </div>
-    <div class="item">
-        <h3><div class="question">3. Где активируется полученная игра?</div></h3>
-        <div class="answer">В сервисах Steam, Origin, Uplay и Battle.net</div>
-    </div>
-    <div class="item" id="Steam">
-        <h3><div class="question">4. Как активировать Steam Ключ / Gift?</div></h3>
-        <div class="answer">Инструкция по активации ключа в Steam:<br>
-            1. Загрузите и установите клиент;<br>
-            2. Зарегистрируйте аккаунт;<br>
-            3. Нажмите кнопку <b>«Добавить игру - активировать через Steam»</b> - следуйте инструкциям;<br>
-            4. После активации, игра появится в «Библиотеке» и Вы сможете ее скачать;<br>
-            5. После полной установки наслаждайтесь игровым процессом.<br>
+<div class="row py-5 px-4">
+    <div class="col-md-5 mx-auto">
+        <div class="bg-white shadow rounded overflow-hidden">
+            <div class="px-4 pt-0 pb-4 cover">
+                <center>
+                    <div class="block">
+                        <div class="profile"><img src="${game.getImage()}" alt="Фото игры" width="200" class="rounded mb-2 img-thumbnail">
+                            <div class="media-body mb-5 text-black">
+                                <h4 class="mt-0 mb-0">${game.getName()}</h4>
+                                <p class="small mb-0"> <i class="fas fa-map-marker-alt mr-2"></i>${game.getCompany()}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="font-weight-bold mb-0 d-block">Цена: ${game.getPrice()} Руб.</h5><br>
+                    <h6 class="font-weight-bold mb-0 d-block">Рейтинг: ${game.getRating()}</h6>
+                </center>
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">О игре:</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <p class="font-weight-normal mb-0">${game.getDescription()}</p>
+                    </div>
+                </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between m-auto">
+                        <a href="/addToBacket?gameId=${game.getId()}" class="btn btn-outline-dark btn-sm btn-block">Добавить в корзину</a></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
