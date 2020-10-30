@@ -1,6 +1,6 @@
 package Servlets;
 
-import Model.UserDB;
+import Model.UserServices.UserDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = req.getSession();
 
         UserDB users = new UserDB();
-
         if(username.equals("") || password.equals("")) {
             resp.sendRedirect("/errorlogin");
         } else {

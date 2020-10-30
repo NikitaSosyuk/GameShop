@@ -1,6 +1,6 @@
 package Servlets;
 
-import Model.UserDB;
+import Model.UserServices.UserDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

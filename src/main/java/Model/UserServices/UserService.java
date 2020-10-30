@@ -1,4 +1,4 @@
-package Model;
+package Model.UserServices;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

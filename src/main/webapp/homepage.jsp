@@ -60,7 +60,7 @@
             <h5 class="card-title">Набор №1 - Эконом</h5>
             <p class="card-text">Сбалансированный кейс. Возможность выиграть: Journey, Forza Horizon, Minecraft и многое другое...</p>
             <h5 class="card-title">229р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
+            <a href="/gamepage?id=1" class="btn btn-dark">Купить</a>
         </div>
     </div>
     <div class="card">
@@ -69,7 +69,7 @@
             <h5 class="card-title">Набор №2 - Баланс</h5>
             <p class="card-text">Выше шанс получить новинки игровой индустрии! Возможность выиграть: Mortal Combat X, GTA V и многое другое..</p>
             <h5 class="card-title">329р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
+            <a href="/gamepage?id=2" class="btn btn-dark">Купить</a>
         </div>
     </div>
     <div class="card">
@@ -78,7 +78,7 @@
             <h5 class="card-title">Набор №3 - Огонь</h5>
             <p class="card-text">Только новинки! Возможность выиграть: Metro Exodus, Death Stranding, Star Wars и многое другое..</p>
             <h5 class="card-title">529р</h5>
-            <a href="#" class="btn btn-dark">Купить</a>
+            <a href="/gamepage?id=3" class="btn btn-dark">Купить</a>
         </div>
     </div>
 </div>

@@ -50,11 +50,11 @@
 <div class="row py-5 px-4">
     <div class="col-md-5 mx-auto">
         <div class="bg-white shadow rounded overflow-hidden">
-            <form class="form" method="post" action="/addemail">
+            <form class="form" method="post" action="/changeEmail">
                 <div class="form-group">
                     <label for="email">Электронная почта</label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                           placeholder="Email">
+                           placeholder="Email" name="email">
                     <small id="emailHelp" class="form-text text-muted"> Ваш адрес электронной почты хранится только у
                         нас.
                     </small>
@@ -63,10 +63,10 @@
                     <button id="add-email" class="btn">Добавить</button>
                 </center>
             </form>
-            <form class="form" method="post" action="/changeusername">
+            <form class="form" method="post" action="/changeUsername">
                 <div class="form-group">
                     <label for="username">Логин</label>
-                    <input class="form-control" id="username" placeholder="Новый логин" onblur="checkUsername()">
+                    <input class="form-control" id="username" placeholder="Новый логин" onblur="checkUsername()" name="new-username">
                     <p class="error" id="username-error" style="display: none; color: red">Логин уже занят</p>
                     <p class="error" id="username-size-error" style="display: none; color: red">Логин слишком короткий</p>
                 </div>

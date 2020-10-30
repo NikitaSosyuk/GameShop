@@ -60,7 +60,7 @@
             <div class="bg-light p-4 d-flex justify-content-end text-center">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">Игр куплено: getCount()</h5><small class="text-muted"></small>
+                        <h5 class="font-weight-bold mb-0 d-block">Игр куплено: <%=request.getAttribute("purchasesCount")%></h5><small class="text-muted"></small>
                     </li>
                 </ul>
             </div>
@@ -68,8 +68,8 @@
                 <h5 class="mb-0">About</h5>
                 <div class="p-4 rounded shadow-sm bg-light">
                     <p class="font-weight-normal mb-0">Username: <%=request.getSession().getAttribute("username")%></p>
-                    <p class="font-weight-normal  mb-0">Email: getEmail()</p>
-                    <p class="font-weight-normal  mb-0">Дата регистрации: <%=request.getSession().getAttribute("registrationTimestamp")%></p>
+                    <p class="font-weight-normal  mb-0">Email: <%=request.getAttribute("email")%></p>
+                    <p class="font-weight-normal  mb-0">Дата регистрации: <%=request.getAttribute("registrationTimestamp")%></p>
                 </div>
             </div>
             <div class="py-4 px-4">
@@ -78,7 +78,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-6 mb-2 pr-lg-1">
-                        <h5 class="mb-0">getLast()</h5>
+                        <h5 class="mb-0"><%=request.getAttribute("lastProductName")%></h5>
                     </div>
                 </div>
             </div>
