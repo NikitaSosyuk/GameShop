@@ -1,9 +1,8 @@
 package Servlets;
 
-import Model.UserDB;
+import Model.UserServices.UserDB;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;

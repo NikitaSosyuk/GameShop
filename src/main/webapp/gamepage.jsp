@@ -64,10 +64,12 @@
                         <p class="font-weight-normal mb-0">${game.getDescription()}</p>
                     </div>
                 </div>
-                <div class="py-4 px-4">
-                    <div class="d-flex align-items-center justify-content-between m-auto">
-                        <a href="/addToBacket?gameId=${game.getId()}" class="btn btn-outline-dark btn-sm btn-block">Добавить в корзину</a></div>
-                </div>
+                <form action="/addToBasket?gameId=${game.getId()}" method="post">
+                    <div class="py-4 px-4">
+                        <div class="d-flex align-items-center justify-content-between m-auto">
+                            <button class="btn btn-outline-dark btn-sm btn-block">Добавить в корзину</button></div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

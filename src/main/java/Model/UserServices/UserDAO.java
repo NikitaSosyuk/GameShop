@@ -1,6 +1,5 @@
-package Model;
+package Model.UserServices;
 
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public interface UserDAO {
@@ -8,4 +7,6 @@ public interface UserDAO {
     User getUserByID(int id);
     User getUserByName(String username);
     boolean userIsExist(String username, String password);
+    public boolean changeUsernameById(int id, String username) throws SQLException;
+    public boolean changeEmailById(int id, String email) throws SQLException;
 }

@@ -1,6 +1,6 @@
 package Filters;
 
-import Model.UserDB;
+import Model.UserServices.UserDB;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;

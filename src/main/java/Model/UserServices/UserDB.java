@@ -1,10 +1,11 @@
-package Model;
+package Model.UserServices;
+
+import Model.MySQLConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 
 public class UserDB implements UserDAO{
@@ -15,13 +16,19 @@ public class UserDB implements UserDAO{
             = "INSERT INTO NNGamingShopDB.users(username, password) VALUES (?, ?)";
 
     private static final String SQL_SELECT_USER_BY_ID
-            = "SELECT id, username, password, registrationTimestamp FROM NNGamingShopDB.users where id = ?";
+            = "SELECT id, username, password, email, registrationTimestamp FROM NNGamingShopDB.users where id = ?";
 
     private static final String SQL_SELECT_USER_BY_USERNAME
-            = "SELECT id, username, password, registrationTimestamp FROM NNGamingShopDB.users where username = ?";
+            = "SELECT id, username, password, email, registrationTimestamp FROM NNGamingShopDB.users where username = ?";
 
     private static final String SQL_SELECT_USER_BY_USERNAME_AND_PASSWORD
-            = "SELECT id, username, password, registrationTimestamp FROM NNGamingShopDB.users where username = ? AND password = ?";
+            = "SELECT id, username, password, email, registrationTimestamp FROM NNGamingShopDB.users where username = ? AND password = ?";
+
+    private static final String SQL_SET_EMAIL_BY_ID
+            = "UPDATE users SET email = ? WHERE id = ?";
+
+    private static final String SQL_SET_USERNAME_BY_ID
+            = "UPDATE users SET username = ? WHERE id = ?";
 
 
     @Override
@@ -103,12 +110,37 @@ public class UserDB implements UserDAO{
 
         if (resultSet.next()){
             user = new User();
-            user.setId(resultSet.getInt(1));
-            user.setUsername(resultSet.getString(2));
-            user.setPassword(resultSet.getString(3));
-            user.setRegistrationTimestamp(resultSet.getTimestamp(4));
+            user.setId(resultSet.getInt("id"));
+            user.setUsername(resultSet.getString("username"));
+            user.setPassword(resultSet.getString("password"));
+            user.setEmail(resultSet.getString("email"));
+            user.setRegistrationTimestamp(resultSet.getTimestamp("registrationTimestamp"));
         }
 
         return user;
+    }
+
+    public boolean changeEmailById(int id, String email) throws SQLException {
+        try (Connection conn = connection.getNewConnection()) {
+            try (PreparedStatement preparedStatement = conn.prepareStatement(SQL_SET_EMAIL_BY_ID)) {
+                preparedStatement.setString(1, email);
+                preparedStatement.setInt(2, id);
+
+                preparedStatement.executeUpdate();
+                return true;
+            }
+        }
+    }
+
+    public boolean changeUsernameById(int id, String username) throws SQLException {
+        try (Connection conn = connection.getNewConnection()) {
+            try (PreparedStatement preparedStatement = conn.prepareStatement(SQL_SET_USERNAME_BY_ID)) {
+                preparedStatement.setString(1, username);
+                preparedStatement.setInt(2, id);
+
+                preparedStatement.executeUpdate();
+                return true;
+            }
+        }
     }
 }

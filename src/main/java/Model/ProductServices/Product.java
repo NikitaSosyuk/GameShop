@@ -1,15 +1,15 @@
-package Model;
+package Model.ProductServices;
 
 import lombok.Data;
 
 @Data
-public class Game {
+public class Product {
     private int id;
-    private double rating;
-    private double price;
+    private String name;
     private String description;
     private String company;
-    private String name;
     private String image;
+    private double price;
     private int countOfMark;
+    private double rating;
 }
