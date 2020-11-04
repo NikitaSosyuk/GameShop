@@ -40,6 +40,7 @@ public class BasketPage extends HttpServlet {
 
         List<Product> products = basketDB.getListOfProductsInBasketByUsername(username);
         purchasesDB.insertProductsIntoDB(username, products);
+        session.setAttribute("products", products);
         basketDB.cleanBasketForUser(username);
 
         resp.sendRedirect("/buypage");
