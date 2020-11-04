@@ -17,10 +17,10 @@ public class PurchasesDB implements PurchasesDAO {
             = "SELECT purchase_timestamp FROM NNGamingShopDB.users_purchases WHERE username = ? ORDER BY purchase_timestamp DESC LIMIT 1";
 
     private static final String SQL_SELECT_LAST_PURCHASE_BY_USERNAME
-            = "SELECT id, `name`, description, company, image, price, count_of_marks, rating FROM products JOIN `product-rating` ON `product-rating`.product_id = products.id JOIN users_purchases ON users_purchases.product_id = products.id WHERE username = ? AND purchase_timestamp = ?";
+            = "SELECT * FROM products JOIN users_purchases ON product_id = products.id WHERE username = ? AND purchase_timestamp = ?";
 
     private static final String SQL_SELECT_PURCHASES_BY_USERNAME
-            = "SELECT id, `name`, description, company, image, price, count_of_marks, rating FROM products JOIN `product-rating` ON `product-rating`.product_id = products.id JOIN users_purchases ON users_purchases.product_id = products.id WHERE username = ?";
+            = "SELECT * FROM products JOIN users_purchases ON product_id = products.id WHERE username = ?";
 
     public boolean insertProductsIntoDB(String username, List<Product> products) throws SQLException {
         try (Connection conn = connection.getNewConnection()) {
@@ -97,7 +97,7 @@ public class PurchasesDB implements PurchasesDAO {
             product.setImage(resultSet.getString("image"));
             product.setCompany(resultSet.getString("company"));
             product.setPrice(resultSet.getDouble("price"));
-            product.setCountOfMark(resultSet.getInt("count_of_marks"));
+            product.setCountOfMark(resultSet.getInt("count_of_mark"));
             product.setRating(resultSet.getDouble("rating"));
 
             listOfProducts.add(product);

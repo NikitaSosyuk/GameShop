@@ -17,7 +17,7 @@ public class BasketDB implements BasketDAO {
             = "INSERT INTO NNGamingShopDB.user_basket(username, product_id) VALUES (?, ?)";
 
     private static final String SQL_SELECT_PRODUCTS_FROM_BASKET_BY_USERNAME
-            = "SELECT id, `name`, description, company, image, price, count_of_marks, rating FROM products JOIN `product-rating` ON `product-rating`.product_id = products.id JOIN user_basket ON user_basket.product_id = products.id WHERE username = ?";
+            = "SELECT * FROM products JOIN user_basket ON product_id = products.id WHERE username = ?";
 
     private static final String SQL_DELETE_PRODUCT_FROM_BASKET
             = "DELETE FROM user_basket WHERE product_id = ? LIMIT 1";
@@ -63,7 +63,7 @@ public class BasketDB implements BasketDAO {
             product.setImage(resultSet.getString("image"));
             product.setCompany(resultSet.getString("company"));
             product.setPrice(resultSet.getDouble("price"));
-            product.setCountOfMark(resultSet.getInt("count_of_marks"));
+            product.setCountOfMark(resultSet.getInt("count_of_mark"));
             product.setRating(resultSet.getDouble("rating"));
 
             listOfProducts.add(product);
