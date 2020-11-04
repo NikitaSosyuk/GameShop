@@ -25,7 +25,6 @@ public class ProfilePageServlet extends HttpServlet {
 
         UserDB users = new UserDB();
         User user = users.getUserByName(username);
-        System.out.println(user.getRegistrationTimestamp());
         String registrationTimestamp = user.getRegistrationTimestamp().toString();
         String email = user.getEmail();
 
