@@ -54,11 +54,6 @@ public class ProductDB implements ProductDAO {
                 preparedStatement.setInt(1, productId);
 
                 Product product = getProductFromDB(preparedStatement);
-
-                System.out.println("___");
-                System.out.println(product);
-                System.out.println(product.getId());
-                System.out.println("---");
                 double currentRating = product.getRating();
                 int currentCountOfMark = product.getCountOfMark();
 

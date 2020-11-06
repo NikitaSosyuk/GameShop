@@ -20,8 +20,6 @@ public class GamePageServlet extends HttpServlet {
         Product product = productDB.getProductByID(id);
         req.setAttribute("game", product);
 
-        System.out.println(product.toString());
-
         req.getServletContext().getRequestDispatcher("/gamepage.jsp").forward(req, resp);
     }
 }

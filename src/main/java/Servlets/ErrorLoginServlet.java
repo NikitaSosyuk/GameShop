@@ -20,7 +20,6 @@ public class ErrorLoginServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         String cookieCheck = req.getParameter("remember");
-        System.out.println("entered");
 
         HttpSession session = req.getSession();
 
@@ -28,7 +27,6 @@ public class ErrorLoginServlet extends HttpServlet {
 
         if(username.equals("") || password.equals("")) {
             resp.sendRedirect("/errorlogin");
-            System.out.println("empty");
         } else {
             if (users.userIsExist(username, password)) {
                 if (cookieCheck != null && cookieCheck.equals("check")) {
