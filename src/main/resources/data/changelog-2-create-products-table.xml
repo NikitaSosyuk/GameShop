@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="2" author="Lyapa">
+        <sql>
+            create table if not exists products
+            (
+            id          int unsigned auto_increment primary key,
+            name        varchar(45)            not null,
+            description varchar(500)           not null,
+            company     varchar(45)            not null,
+            image       varchar(60)            not null,
+            price       decimal(6, 2) unsigned not null,
+            constraint id_UNIQUE
+            unique (id),
+            constraint name_UNIQUE
+            unique (name)
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

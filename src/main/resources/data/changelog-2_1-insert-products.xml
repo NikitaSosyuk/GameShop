@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="3" author="Lyapa">
+        <sql>
+            INSERT INTO NNGamingShopDB.products (id, name, description, company, image, price) VALUES (1, 'Набор №1 - Эконом', 'Сбалансированный кейс. Возможность выиграть: Journey, Forza Horizon, Minecraft и многое другое...', 'NNGamingShop', '/images/homePageImages/CaseOne.jpg', 229.00);
+            INSERT INTO NNGamingShopDB.products (id, name, description, company, image, price) VALUES (2, 'Набор №2 - Баланс', 'Выше шанс получить новинки игровой индустрии! Возможность выиграть: Mortal Combat X, GTA V и многое другое..', 'NNGamingShop', '/images/homePageImages/CaseTwo.jpg', 329.00);
+            INSERT INTO NNGamingShopDB.products (id, name, description, company, image, price) VALUES (3, 'Набор №3 - Огонь', 'Только новинки! Возможность выиграть: Metro Exodus, Death Stranding, Star Wars и многое другое..', 'NNGamingShop', '/images/homePageImages/CaseThree.jpg', 529.00);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
