@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <include file="data/changelog-1-create-users-table.xml" relativeToChangelogFile="true"/>
+    <include file="data/changelog-2-create-products-table.xml" relativeToChangelogFile="true"/>
+    <include file="data/changelog-2_1-insert-products.xml" relativeToChangelogFile="true"/>
+    <include file="data/changelog-3-create-user_basket-table.xml" relativeToChangelogFile="true"/>
+    <include file="data/changelog-4-create-users_purchases-table.xml" relativeToChangelogFile="true"/>
+    <include file="data/changelog-5-create-product-rating-table.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

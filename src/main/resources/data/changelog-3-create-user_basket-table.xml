@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="4" author="Lyapa">
+        <sql>
+            create table if not exists user_basket
+            (
+            username   varchar(20)  not null,
+            product_id int unsigned not null,
+            constraint user_basket_ibfk_2
+            foreign key (username) references users (username)
+            on update cascade,
+            constraint user_basket_ibfk_3
+            foreign key (product_id) references products (id)
+            on update cascade
+            );
+
+            create index product_id
+            on user_basket (product_id);
+
+            create index username
+            on user_basket (username);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

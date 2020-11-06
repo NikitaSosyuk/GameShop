@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="6" author="Lyapa">
+        <sql>
+            create table if not exists `product-rating`
+            (
+            product_id     int unsigned           not null,
+            count_of_marks smallint unsigned      null,
+            rating         decimal(3, 2) unsigned null,
+            constraint product_id_UNIQUE
+            unique (product_id),
+            constraint `product-rating_ibfk_1`
+            foreign key (product_id) references products (id)
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

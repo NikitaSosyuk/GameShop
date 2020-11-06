@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-master.xml"
+                   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    
+    <changeSet id="1" author="Lyapa">
+        <sql>
+            create table if not exists users
+            (
+            id                    int unsigned auto_increment primary key,
+            username              varchar(20)                         not null,
+            password              varchar(1000)                       not null,
+            email                 varchar(45)                         null,
+            registrationTimestamp timestamp default CURRENT_TIMESTAMP not null,
+            constraint id_UNIQUE
+            unique (id),
+            constraint username_UNIQUE
+            unique (username)
+            );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
